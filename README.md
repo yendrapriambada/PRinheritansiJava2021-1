@@ -4,6 +4,7 @@
 ====================================
 TUGAS PEMROGRAMAN BERORIENTASI OBJEK
 ====================================
+Pendidikan Ilmu Komputer B 2019 Semester 4 Universitas Pendidikan Indonesia
 Nama Anggota:
 1. Dwi Fitria Al Husaeni	- 1903480
 2. Mochamad Yendra Priambada 	- 1900056
