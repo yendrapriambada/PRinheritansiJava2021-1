@@ -40,8 +40,72 @@ Deskripsi modifikasi/tambahan dari kode sebelumnya:
      -- Class turunan : Pintu, Senjata, dan Perisai
 4. Tambahn Polymorphisme
    - class player method setObjGame info, turunan dari class karakter
+   public class Player extends Karakter{
+      @Override
+       public void setObjGameInfo(GameInfo objGameInfo) {
+           this.objGameInfo = objGameInfo;
+           objItem.setObjGameInfo(objGameInfo);
+       }
+   }
+   
    - class senjata dan perisai, parent class item, pada method item pakai dan item lepas
+    //method pakai Item
+    @Override
+    public void itemPakai(Player player) {
+        if (this.isStatusPemakaian() == false){
+            this.setStatusPemakaian(true);
+            player.setAtk(player.getAtk()+this.atk);
+            System.out.println("Item berhasil digunakan");
+        }
+        else{
+            System.out.println("Sudah ada Senjata yang digunakan");
+        }
+
+    }
+
+    @Override
+    //method lepas item
+    public void itemLepas(Player player) {
+        if (this.isStatusPemakaian() == true){
+            this.setStatusPemakaian(false);
+            player.setAtk(player.getAtk()-this.atk);
+            System.out.println("Item berhasil dilepas");
+        }
+
+        else{
+            System.out.println("Belum ada Senjata yang digunakan");
+        }
+    }
+    
    - pada class pintu yang merupakan turunan kelas item terdapat konsep polymorphisme pada getAksi dan prosesAksi
+   public void prosesAksi(int subPil) {
+        //1: deskripsikan
+        //2: buka pintu
+        if (subPil==1) {
+            System.out.println("Pintu tua dengan pegangan pintunya yang sudah rusak");
+        }
+        else if (subPil==2) {
+            //cek apakah mempunyai kunci
+            if (objGameInfo.getObjPlayer().cariItem("Palu")) {
+                //kunci ada, pintu terbuka
+                System.out.println("Player menggunakan Palu untuk mendobrak pintu dan pintu terbuka!");
+
+                //objGameInfo.setGameOver(true);
+
+                //set keterangan pintu di ruangan 1 untuk masuk ke ruangan kedua kebuka
+                objGameInfo.getObjRuangan().getObjPintu().setPintuTerbuka(true); //set isPintuTerbuka = true
+
+            }
+            else {
+                //kunci tidak ada
+                System.out.println("Player mencoba membuka pintu. Pintu Tidak bisa terbuka! Karena pegangan pintu sudah rusak");
+            }
+        }
+    }
+    public ArrayList<String> getAksi() {
+        return arrAksi;
+    }
+   
 5. Perbaiki
    - Memisahkan method aksi dan beberapa method menuAksi, proses tampilan aksi-aksi  di setiap class 
      menjadi sebuah class baru yakni class aksi
