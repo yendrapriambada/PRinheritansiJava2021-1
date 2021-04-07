@@ -31,8 +31,12 @@ Deskripsi modifikasi/tambahan dari kode sebelumnya:
      -- Class turunan : NPC, Musuh, dan Player
    - Parent Class Item
      -- Class turunan : Pintu, Senjata, dan Perisai
-3. Perbaiki
-   - Memisahkan method aksi dan beberapa method menuAksi di setiap class 
+3. Tambahn Polymorphisme
+   - class player methode setObjGame info, turunan dari class karakter
+   - class senjata dan perisai, parent class item, pada method item pakai dan item lepas
+   - pada class pintu yang merupakan turunan kelas item terdapat konsep polymorphisme pada getAksi dan prosesAksi
+4. Perbaiki
+   - Memisahkan method aksi dan beberapa method menuAksi, proses tampilan aksi-aksi  di setiap class 
      menjadi sebuah class baru yakni class aksi
    - Pada class player, proses aksi yang memiliki alur 
      seperti class ruangan diganti dengan memanggil 
