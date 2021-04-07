@@ -39,7 +39,7 @@ Deskripsi modifikasi/tambahan dari kode sebelumnya:
    - Parent Class Item
      -- Class turunan : Pintu, Senjata, dan Perisai
 4. Tambahn Polymorphisme
-   - class player methode setObjGame info, turunan dari class karakter
+   - class player method setObjGame info, turunan dari class karakter
    - class senjata dan perisai, parent class item, pada method item pakai dan item lepas
    - pada class pintu yang merupakan turunan kelas item terdapat konsep polymorphisme pada getAksi dan prosesAksi
 5. Perbaiki
