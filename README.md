@@ -19,29 +19,28 @@ Mari kita Bantu player untuk menemukan kunci box Kayu tersebut dan jangan
 lupa untuk mengalahkan musuh yang ada di salah satu ruangan!!
 
 Deskripsi modifikasi/tambahan dari kode sebelumnya:
-
-1. List Objek baru:
-   - Sapu = sebagai senjata untuk memukul musuh
-   - Teflon = sebagai alat pertahanan / tameng untuk meredam serangan musuh
-   - Palu = sebagai alat untuk mendobrak pintu yang handle nya rusak
-   - Box Kayu = Box Kayu yang masih terkunci dan harus mencari kunci untuk membukanya
-   - Pintu = ada 2 pintu, 1 di rungan 1 dan 1 lagi  di ruangan 2
-2. Tambahan Class
+1. Tambahan Class
    - Class Aksi 
    - Class Karakter
    - Class Musuh
    - Class Perisai
    - Class Pertarungan
    - Class Senjata
-3. Tambahan Inheritance
+2. Tambahan Inheritance
    - Parent Class Karakter
      -- Class turunan : NPC, Musuh, dan Player
    - Parent Class Item
      -- Class turunan : Pintu, Senjata, dan Perisai
-4. Tambahn Polymorphisme
+3. Tambahan Polymorphisme
    - class player methode setObjGame info, turunan dari class karakter
    - class senjata dan perisai, parent class item, pada method item pakai dan item lepas
    - pada class pintu yang merupakan turunan kelas item terdapat konsep polymorphisme pada getAksi dan prosesAksi
+4. List Objek baru:
+   - Sapu = sebagai senjata untuk memukul musuh
+   - Teflon = sebagai alat pertahanan / tameng untuk meredam serangan musuh
+   - Palu = sebagai alat untuk mendobrak pintu yang handle nya rusak
+   - Box Kayu = Box Kayu yang masih terkunci dan harus mencari kunci untuk membukanya
+   - Pintu = ada 2 pintu, 1 di rungan 1 dan 1 algi  di ruangan 2
 5. Perbaiki
    - Memisahkan method aksi dan beberapa method menuAksi, proses tampilan aksi-aksi  di setiap class 
      menjadi sebuah class baru yakni class aksi
